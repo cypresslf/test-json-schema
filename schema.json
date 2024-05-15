@@ -3,7 +3,17 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "first": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["first", "last"]
     },
     "age": {
       "type": "integer",
