@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "definitions": {
     "person": {
-      "$id": "person",
       "type": "object",
       "properties": {
         "name": { "type": "string" },
@@ -27,11 +26,9 @@
       "additionalProperties": false
     },
     "hobby": {
-      "$id": "hobby",
       "type": "string"
     },
     "job": {
-      "$id": "job",
       "type": "object",
       "properties": {
         "title": { "type": "string" },
