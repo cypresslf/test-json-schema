@@ -1,25 +1,45 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
-  "properties": {
-    "name": {
+  "definitions": {
+    "person": {
+      "$id": "person",
       "type": "object",
       "properties": {
-        "first": {
-          "type": "string"
+        "name": { "type": "string" },
+        "age": {
+          "type": "integer",
+          "minimum": 0
         },
-        "last": {
-          "type": "string"
+        "hobbies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/hobby"
+          }
+        },
+        "jobs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/job"
+          }
         }
       },
-      "additionalProperties": false,
-      "required": ["first", "last"]
+      "required": ["age"],
+      "additionalProperties": false
     },
-    "age": {
-      "type": "integer",
-      "minimum": 0
+    "hobby": {
+      "$id": "hobby",
+      "type": "string"
+    },
+    "job": {
+      "$id": "job",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "employer": { "type": "string" }
+      },
+      "required": ["title", "employer"],
+      "additionalProperties": false
     }
   },
-  "additionalProperties": false,
-  "required": ["name", "age"]
+  "$ref": "#/definitions/person"
 }

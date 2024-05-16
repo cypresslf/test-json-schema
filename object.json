@@ -1,4 +1,9 @@
 {
-  "name": { "first": "John", "last": "Doe" },
-  "age": 0
+  "name": "Blueberry",
+  "age": 1,
+  "hobbies": ["eating", "sleeping", "growing"],
+  "jobs": [
+    { "employer": "farm", "title": "being cute" },
+    { "employer": "bakery", "title": "ingredient in muffins" }
+  ]
 }
