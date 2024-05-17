@@ -5,5 +5,8 @@
   "jobs": [
     { "employer": "farm", "title": "being cute" },
     { "employer": "bakery", "title": "ingredient in muffins" }
-  ]
+  ],
+  "json": {
+    "key": "value"
+  }
 }

@@ -20,6 +20,9 @@
           "items": {
             "$ref": "#/definitions/job"
           }
+        },
+        "json": {
+          "$ref": "#/definitions/json"
         }
       },
       "required": ["age"],
@@ -36,7 +39,8 @@
       },
       "required": ["title", "employer"],
       "additionalProperties": false
-    }
+    },
+    "json": {}
   },
   "$ref": "#/definitions/person"
 }
